@@ -14,11 +14,14 @@ class CardSelectionVC: UIViewController {
     let stopButton      = CustomButton(backgroudnColor: .systemRed, title: "Stop!")
     let resetButton     = CustomButton(backgroudnColor: .systemGreen, title: "Reset")
     let rulesButton     = CustomButton(backgroudnColor: .systemBlue, title: "Rules")
+    var timer           : Timer!
+    var cards : [UIImage] = Card.allValues
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureUI()
+        startTimer()
     }
     
     
@@ -52,7 +55,7 @@ class CardSelectionVC: UIViewController {
     
     func configureStopButton(){
         view.addSubview(stopButton)
-        
+        stopButton.addTarget(self, action: #selector(stopTimer), for: .touchUpInside)
         NSLayoutConstraint.activate([
         
             stopButton.widthAnchor.constraint(equalToConstant: 250),
@@ -66,6 +69,8 @@ class CardSelectionVC: UIViewController {
     
     func configureResetButton(){
         view.addSubview(resetButton)
+        resetButton.addTarget(self, action: #selector(restartTimer), for: .touchUpInside)
+        
         
         NSLayoutConstraint.activate([
         
@@ -80,6 +85,7 @@ class CardSelectionVC: UIViewController {
     
     func configureRulesButton(){
         view.addSubview(rulesButton)
+        rulesButton.addTarget(self, action: #selector(presentRulesVC), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
         
@@ -91,8 +97,29 @@ class CardSelectionVC: UIViewController {
         ])
         
     }
+    
+    
+    @objc func presentRulesVC(){
+        present(RulesVC(), animated: true)
+    }
 
     
+     func startTimer(){
+         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(showRandomCard), userInfo: nil, repeats: true)
+    }
+    
+    @objc func stopTimer(){
+        timer.invalidate()
+    }
+    
+    @objc func restartTimer(){
+        timer.invalidate()
+        startTimer()
+    }
+    
+    @objc func showRandomCard(){
+        cardImageView.image = cards.randomElement() ?? UIImage(named: "QH")
+    }
     
 
 

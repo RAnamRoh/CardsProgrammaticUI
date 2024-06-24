@@ -13,6 +13,8 @@
 		4AD2D7232C295E550047C6E8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4AD2D7222C295E550047C6E8 /* Base */; };
 		4AD2D72B2C29644B0047C6E8 /* CardSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2D72A2C29644B0047C6E8 /* CardSelectionVC.swift */; };
 		4AD2D72D2C2968660047C6E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2D72C2C2968660047C6E8 /* CustomButton.swift */; };
+		4AD2D72F2C299E6C0047C6E8 /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2D72E2C299E6C0047C6E8 /* RulesVC.swift */; };
+		4AD2D7312C29A51D0047C6E8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD2D7302C29A51D0047C6E8 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4AD2D7242C295E550047C6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AD2D72A2C29644B0047C6E8 /* CardSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSelectionVC.swift; sourceTree = "<group>"; };
 		4AD2D72C2C2968660047C6E8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4AD2D72E2C299E6C0047C6E8 /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		4AD2D7302C29A51D0047C6E8 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				4AD2D7162C295E540047C6E8 /* AppDelegate.swift */,
 				4AD2D7182C295E540047C6E8 /* SceneDelegate.swift */,
 				4AD2D72A2C29644B0047C6E8 /* CardSelectionVC.swift */,
+				4AD2D72E2C299E6C0047C6E8 /* RulesVC.swift */,
 				4AD2D72C2C2968660047C6E8 /* CustomButton.swift */,
 				4AD2D71F2C295E550047C6E8 /* Assets.xcassets */,
 				4AD2D7212C295E550047C6E8 /* LaunchScreen.storyboard */,
 				4AD2D7242C295E550047C6E8 /* Info.plist */,
+				4AD2D7302C29A51D0047C6E8 /* Card.swift */,
 			);
 			path = CardsProgrammaticUI;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AD2D72D2C2968660047C6E8 /* CustomButton.swift in Sources */,
+				4AD2D7312C29A51D0047C6E8 /* Card.swift in Sources */,
+				4AD2D72F2C299E6C0047C6E8 /* RulesVC.swift in Sources */,
 				4AD2D7172C295E540047C6E8 /* AppDelegate.swift in Sources */,
 				4AD2D7192C295E540047C6E8 /* SceneDelegate.swift in Sources */,
 				4AD2D72B2C29644B0047C6E8 /* CardSelectionVC.swift in Sources */,
